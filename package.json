@@ -1,0 +1,24 @@
+{
+  "name": "ts6-bot",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "package:win": "set PKG_CACHE_PATH=.pkg-cache&& npm run build && pkg dist/index.js --target node18-win-x64 --output dist/ts6-bot.exe"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "teamspeak.js": "^1.11.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "pkg": "^5.8.1",
+    "typescript": "^5.8.2"
+  },
+  "pkg": {
+    "outputPath": "dist"
+  }
+}
